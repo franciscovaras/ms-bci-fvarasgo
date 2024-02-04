@@ -1,21 +1,24 @@
-package com.fvarasgo.bci.demo.msbcifvarasgo.entity;
+package com.fvarasgo.bci.demo.msbcifvarasgo.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
 public class UserResponse {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+
     private Long id;
+    private Date created;
+    private Date modified;
+    private Date lastLogin;
+    private String token;
+    private boolean isaActive;
+
 
 }

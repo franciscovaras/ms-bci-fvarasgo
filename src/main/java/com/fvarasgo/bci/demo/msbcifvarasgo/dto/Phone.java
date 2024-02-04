@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 
 public class Phone {
-
-    private Long id;
     private String number;
     private String citycode;
     private String contrycode;
