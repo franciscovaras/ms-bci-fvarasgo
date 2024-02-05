@@ -43,15 +43,17 @@ public class UserServiceImpl implements UserService {
                 .token(token)
                 .isaActive(true)
                 .build();
-        UserData resultado = findByMail(user.getEmail());
 
-        //validar si se encuentra registrado el mail consultado
+        //validar si se encuentra registrado el mail consultado en BD
+        UserData resultado = findByMail(user.getEmail());
         if (resultado != null) {
             throw new UsuarioNoEncontradoException("El mail ya se encuentra registrado.");
         }
 
+        //Guardamos la data en bd h2
         save(user);
 
+        //Retornamos el objeto response
         return UserResponse.builder()
                 .id(user.getId())
                 .created(Utils.obtenerDiaActual())
