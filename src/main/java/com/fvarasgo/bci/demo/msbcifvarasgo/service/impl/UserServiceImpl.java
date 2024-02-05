@@ -45,6 +45,7 @@ public class UserServiceImpl implements UserService {
                 .build();
         UserData resultado = findByMail(user.getEmail());
 
+        //validar si se encuentra registrado el mail consultado
         if (resultado != null) {
             throw new UsuarioNoEncontradoException("El mail ya se encuentra registrado.");
         }

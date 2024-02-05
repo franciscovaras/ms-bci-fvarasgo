@@ -11,14 +11,6 @@ public class Utils {
     private static JSONObject json = null;
     private static final String FMT_FECHA_YYYY_MM_DD_GUION = "yyyy-MM-dd";
 
-    public static String errorsJson(BindingResult result) {
-        json = new JSONObject();
-        for (FieldError error : result.getFieldErrors()) {
-            json.put(error.getField(), error.getDefaultMessage());
-        }
-        return json.toString();
-    }
-
     public static String messageJson(String value) {
         json = new JSONObject();
         return json.put("message", value).toString();
