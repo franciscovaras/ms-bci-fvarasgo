@@ -2,8 +2,9 @@ package com.fvarasgo.bci.demo.msbcifvarasgo.controller;
 
 import com.fvarasgo.bci.demo.msbcifvarasgo.dto.UserRequest;
 import com.fvarasgo.bci.demo.msbcifvarasgo.dto.UserResponse;
-import com.fvarasgo.bci.demo.msbcifvarasgo.exception.SugeridoException;
+import com.fvarasgo.bci.demo.msbcifvarasgo.exception.UsuarioException;
 import com.fvarasgo.bci.demo.msbcifvarasgo.service.UserService;
+import com.fvarasgo.bci.demo.msbcifvarasgo.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,8 +25,8 @@ public class UserController {
         try {
             response = userService.userRegister(userRequest);
 
-        } catch (SugeridoException.ErrorSolicitud e) {
-            ResponseEntity.badRequest().build();
+        } catch (UsuarioException.ErrorSolicitud e) {
+            ResponseEntity.badRequest().body(Utils.messageJson("error en la insersión"));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

@@ -7,4 +7,5 @@ import com.fvarasgo.bci.demo.msbcifvarasgo.entity.UserData;
 public interface UserService {
     public UserResponse userRegister(UserRequest userRequest) throws Exception;
     public void save(UserData user);
+    public UserData findByMail(String email);
 }

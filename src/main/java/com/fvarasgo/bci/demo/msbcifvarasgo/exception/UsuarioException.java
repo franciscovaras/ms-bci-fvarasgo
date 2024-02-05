@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Map;
 
-public class SugeridoException extends RuntimeException {
+public class UsuarioException extends RuntimeException {
 
     @Data
     @AllArgsConstructor
@@ -30,5 +30,12 @@ public class SugeridoException extends RuntimeException {
     @EqualsAndHashCode(callSuper = true)
     public static class ErrorSolicitud extends RuntimeException {
         private final transient Map<String, Object> map;
+    }
+
+    @Data
+    @AllArgsConstructor
+    @EqualsAndHashCode(callSuper = true)
+    public static class ErrorMail extends RuntimeException {
+        private final transient Map<String, String> map;
     }
 }
