@@ -1,5 +1,6 @@
 package com.fvarasgo.bci.demo.msbcifvarasgo.dto;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@ApiModel(description = "Respuesta del registro de usuario")
 public class UserResponse {
 
     private Long id;

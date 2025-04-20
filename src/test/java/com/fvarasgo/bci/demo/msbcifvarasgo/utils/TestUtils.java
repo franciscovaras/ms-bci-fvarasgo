@@ -17,8 +17,8 @@ public class TestUtils {
 
     public static UserRequest getUserRequest(){
         return UserRequest.builder()
-                .name("Juan Rodriguez")
-                .email("juan111@rodriguez.org")
+                .nombre("Juan Rodriguez")
+                .correo("juan111@rodriguez.org")
                 .password("hunter2")
                 .phones(Arrays.asList(getPhone()))
                 .build();
@@ -45,8 +45,8 @@ public class TestUtils {
 
     public static UserData getUserData() {
         return UserData.builder()
-                .name(getUserRequest().getName())
-                .email(getUserRequest().getEmail())
+                .name(getUserRequest().getNombre())
+                .email(getUserRequest().getCorreo())
                 .password(getUserRequest().getPassword())
                 .created(Utils.obtenerDiaActual())
                 .modified(Utils.obtenerDiaActual())

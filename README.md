@@ -15,21 +15,21 @@ levanta de manera local en el puerto 8080, tiene un solo endpoint que registra u
 se insertan datos dummy
 
 #Swagger
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/swagger-ui/index.html
 
 #BD
 http://localhost:8080/h2-console/login.jsp?jsessionid=6a1b5ec3b8668cb4f7ebde87d9cb7516 
 
 #Body
 {
-    "name": "Juan Rodriguez",
-    "email": "juan@rodriguez.org",
-    "password": "hunter2",
-    "phones": [
+"nombre": "Juan Rodriguez",
+"correo": "juan@rodriguez.org",
+"contraseña": "hunter2",
+"telefonos": [
         {
-            "number": "1234567",
-            "citycode": "1",
-            "contrycode": "57"
+        "numero": "1234567",
+        "codigoCiudad": "1",
+        "codigoPais": "57"
         }
     ]
 } 
@@ -39,4 +39,4 @@ http://localhost:8080/h2-console/login.jsp?jsessionid=6a1b5ec3b8668cb4f7ebde87d9
 | Nombre          | Ruta                            |  Tipo  | Descripción       
 | registerUsuario | http://localhost:8080/usuario   |  POST  | End point encardo de hacer lógica de registrar Usuario  |
 
-http://localhost:8080/h2-console/login.jsp?jsessionid=6a1b5ec3b8668cb4f7ebde87d9cb7516 
+http://localhost:8080/h2-console/login.do?jsessionid=b8ce742999bd4635c22d36290f8bac2a

@@ -29,13 +29,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponse userRegister(UserRequest userRequest) {
-        String email = userRequest.getEmail();
+        String email = userRequest.getCorreo();
         checkEmail(email); //verificar formato de mail sea correcto
-        String token = getJWTToken(userRequest.getName()); //obtener token
+        String token = getJWTToken(userRequest.getNombre()); //obtener token
 
         UserData user = UserData.builder()
-                .name(userRequest.getName())
-                .email(userRequest.getEmail())
+                .name(userRequest.getNombre())
+                .email(userRequest.getCorreo())
                 .password(userRequest.getPassword())
                 .created(Utils.obtenerDiaActual())
                 .modified(Utils.obtenerDiaActual())
