@@ -105,11 +105,7 @@ public class UserController {
     public ResponseEntity<Object> updateUsuario(@PathVariable UUID id, @RequestBody UserRequestDto userDto) {
         return ResponseEntity.ok(userService.updateUser(id, UserMapper.toDomain(userDto)));
     }
-    @Operation(summary = "Actualizar parcialmente usuario", description = "Realiza una actualización parcial de un usuario usando su UUID.")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Usuario actualizado parcialmente"),
-            @ApiResponse(code = 404, message = "Usuario no encontrado")
-    })
+
 
     /**
      * Realiza una actualización parcial de un usuario.
@@ -118,6 +114,11 @@ public class UserController {
      * @param updates Un mapa con los campos a actualizar y sus nuevos valores.
      * @return ResponseEntity con la información del usuario parcialmente actualizado.
      */
+    @Operation(summary = "Actualizar parcialmente usuario", description = "Realiza una actualización parcial de un usuario usando su UUID.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Usuario actualizado parcialmente"),
+            @ApiResponse(code = 404, message = "Usuario no encontrado")
+    })
     @PatchMapping("/{id}")
     public ResponseEntity<Object> patchUsuario(@PathVariable UUID id, @RequestBody Map<String, Object> updates) {
         return ResponseEntity.ok(userService.patchUser(id, updates));

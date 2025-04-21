@@ -35,13 +35,16 @@ http://localhost:8080/h2-console/login.jsp?jsessionid=6a1b5ec3b8668cb4f7ebde87d9
 } 
 
 # End Points
-Nombre	          Ruta	                           Método HTTP	    Descripción
-registerUsuario	http://localhost:8080/usuario	      POST	      Registra un nuevo usuario en el sistema.
-getAllUsuarios	http://localhost:8080/usuario	      GET	      Obtiene la lista completa de usuarios registrados.
-getUsuarioById	http://localhost:8080/usuario/{id}	  GET	      Obtiene la información de un usuario según su UUID.
-updateUsuario	http://localhost:8080/usuario/{id}	  PUT	      Actualiza completamente la información de un usuario existente.
-patchUsuario	http://localhost:8080/usuario/{id}	  PATCH	      Actualiza parcialmente los campos de un usuario específico.
-deleteUsuario	http://localhost:8080/usuario/{id}	  DELETE	  Elimina un usuario del sistema usando su UUID.
 
-# Base de datos
-http://localhost:8080/h2-console/login.do?jsessionid=b8ce742999bd4635c22d36290f8bac2a
+### 📘 Endpoints del Servicio de Usuarios
+
+| Nombre              | Ruta                                 | Método HTTP | Descripción                                                                 |
+|---------------------|--------------------------------------|-------------|-----------------------------------------------------------------------------|
+| registerUsuario     | `http://localhost:8080/usuario`      | POST        | Registra un nuevo usuario en el sistema.                                   |
+| getAllUsuarios      | `http://localhost:8080/usuario`      | GET         | Obtiene la lista completa de usuarios registrados.                         |
+| getUsuarioById      | `http://localhost:8080/usuario/{id}` | GET         | Obtiene la información de un usuario según su UUID.                        |
+| updateUsuario       | `http://localhost:8080/usuario/{id}` | PUT         | Actualiza completamente la información de un usuario existente.            |
+| patchUsuario        | `http://localhost:8080/usuario/{id}` | PATCH       | Actualiza parcialmente los campos de un usuario específico.                |
+| deleteUsuario       | `http://localhost:8080/usuario/{id}` | DELETE      | Elimina un usuario del sistema usando su UUID.                             |
+
+
