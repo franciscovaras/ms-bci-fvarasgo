@@ -34,7 +34,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 // ✅ Endpoints públicos personalizados
                 .antMatchers(HttpMethod.POST, "/usuario").permitAll()
-
+                .antMatchers(HttpMethod.GET, "/usuario").permitAll()
+                .antMatchers(HttpMethod.GET, "/usuario/**").permitAll()
+                .antMatchers(HttpMethod.PUT, "/usuario/**").permitAll()
+                .antMatchers(HttpMethod.PATCH, "/usuario/**").permitAll()
+                .antMatchers(HttpMethod.DELETE, "/usuario/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);

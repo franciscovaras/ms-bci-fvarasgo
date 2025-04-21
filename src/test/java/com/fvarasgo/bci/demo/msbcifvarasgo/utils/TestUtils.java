@@ -1,11 +1,15 @@
 package com.fvarasgo.bci.demo.msbcifvarasgo.utils;
 
-import com.fvarasgo.bci.demo.msbcifvarasgo.dto.Phone;
-import com.fvarasgo.bci.demo.msbcifvarasgo.dto.UserRequest;
-import com.fvarasgo.bci.demo.msbcifvarasgo.dto.UserResponse;
+import com.fvarasgo.bci.demo.msbcifvarasgo.controller.dto.PhoneDto;
+import com.fvarasgo.bci.demo.msbcifvarasgo.controller.dto.UserRequestDto;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.Phone;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserRequest;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserResponse;
 import com.fvarasgo.bci.demo.msbcifvarasgo.entity.UserData;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
 
 public class TestUtils {
 
@@ -15,6 +19,17 @@ public class TestUtils {
             "                        \"wOTY1MDV9.w5vbIz9Ljfvs0WuuYnZ0hNcmHWdHLgWoIkkv5k\" +\n" +
             "                        \"WeYynTn70_sghBuJTiafoexCD7T8EdSsJpWlxqcHsOvxmu7A\"";
 
+    // Método para crear un UserRequestDto (lo que se recibe en el controlador)
+    public static UserRequestDto getUserRequestDto(){
+        return UserRequestDto.builder()
+                .nombre("Juan Rodriguez")
+                .correo("juan111@rodriguez.org")
+                .password("hunter2")
+                .phones(List.of(getPhoneDto()))
+                .build();
+    }
+
+    // Método para crear un UserRequest (lo que se usa en el servicio)
     public static UserRequest getUserRequest(){
         return UserRequest.builder()
                 .nombre("Juan Rodriguez")
@@ -25,7 +40,15 @@ public class TestUtils {
     }
 
     public static Phone getPhone(){
-        return  Phone.builder()
+        return Phone.builder()
+                .number("1234567")
+                .citycode("1")
+                .contrycode("57")
+                .build();
+    }
+
+    public static PhoneDto getPhoneDto(){
+        return PhoneDto.builder()
                 .number("1234567")
                 .citycode("1")
                 .contrycode("57")
@@ -34,12 +57,12 @@ public class TestUtils {
 
     public static UserResponse getUserResponse() {
         return UserResponse.builder()
-                .id(5L)
+                .id(UUID.randomUUID())
                 .created(Utils.obtenerDiaActual())
                 .modified(Utils.obtenerDiaActual())
                 .lastLogin(Utils.obtenerDiaActual())
                 .token(TOKEN)
-                .isaActive(true)
+                .isActive(true)
                 .build();
     }
 
@@ -52,8 +75,7 @@ public class TestUtils {
                 .modified(Utils.obtenerDiaActual())
                 .lastLogin(Utils.obtenerDiaActual())
                 .token(TOKEN)
-                .isaActive(true)
+                .isActive(true)
                 .build();
     }
-
 }

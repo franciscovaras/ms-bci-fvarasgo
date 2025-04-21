@@ -1,4 +1,4 @@
-package com.fvarasgo.bci.demo.msbcifvarasgo.dto;
+package com.fvarasgo.bci.demo.msbcifvarasgo.service.common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

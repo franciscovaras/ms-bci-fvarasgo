@@ -1,10 +1,10 @@
 package com.fvarasgo.bci.demo.msbcifvarasgo.utils;
 
 import net.minidev.json.JSONObject;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Utils {
@@ -22,4 +22,7 @@ public class Utils {
         return formatter.get2DigitYearStart();
     }
 
+    public static Date toDate(LocalDateTime localDateTime) {
+        return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
+    }
 }
