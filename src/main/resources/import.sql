@@ -1,5 +1,4 @@
 /* Populate tables */
--- Si fue un error y quisiste decir 'is_active', cambia la definición:
 CREATE TABLE IF NOT EXISTS usuario (
                                        id VARCHAR(36) NOT NULL PRIMARY KEY,
     name VARCHAR(255),
@@ -19,4 +18,3 @@ VALUES
     (RANDOM_UUID(), 'miguel', 'miguel@gmail.com', 'xxy', NOW(), NOW(), NOW(), 'http://imagen2', true),
     (RANDOM_UUID(), 'claudia', 'claudia@gmail.com', 'xxc', NOW(), NOW(), NOW(), 'http://imagen3', true),
     (RANDOM_UUID(), 'mirella', 'mirella@gmail.com', 'xxd', NOW(), NOW(), NOW(), 'http://imagen4', true);
-
