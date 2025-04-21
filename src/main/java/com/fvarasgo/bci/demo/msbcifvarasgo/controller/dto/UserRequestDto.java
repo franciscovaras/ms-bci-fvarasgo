@@ -1,8 +1,8 @@
 package com.fvarasgo.bci.demo.msbcifvarasgo.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.Phone;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserRequest;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.Phone;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.UserRequest;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

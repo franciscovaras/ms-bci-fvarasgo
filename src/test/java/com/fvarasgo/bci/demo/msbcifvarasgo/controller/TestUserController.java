@@ -2,9 +2,8 @@ package com.fvarasgo.bci.demo.msbcifvarasgo.controller;
 
 import com.fvarasgo.bci.demo.msbcifvarasgo.controller.dto.UserRequestDto;
 import com.fvarasgo.bci.demo.msbcifvarasgo.controller.dto.UserMapper;
-import com.fvarasgo.bci.demo.msbcifvarasgo.exception.UsuarioException;
 import com.fvarasgo.bci.demo.msbcifvarasgo.service.UserService;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserResponse;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.UserResponse;
 import com.fvarasgo.bci.demo.msbcifvarasgo.utils.TestUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

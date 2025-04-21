@@ -1,8 +1,8 @@
 package com.fvarasgo.bci.demo.msbcifvarasgo.service;
 
 import com.fvarasgo.bci.demo.msbcifvarasgo.entity.UserData;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserRequest;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserResponse;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.UserRequest;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.UserResponse;
 
 import java.util.List;
 import java.util.Map;

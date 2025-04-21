@@ -1,9 +1,9 @@
 package com.fvarasgo.bci.demo.msbcifvarasgo.controller.dto;
 
 import com.fvarasgo.bci.demo.msbcifvarasgo.entity.UserData;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.Phone;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserRequest;
-import com.fvarasgo.bci.demo.msbcifvarasgo.service.common.UserResponse;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.Phone;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.UserRequest;
+import com.fvarasgo.bci.demo.msbcifvarasgo.service.domain.UserResponse;
 
 import java.util.List;
 import java.util.stream.Collectors;
